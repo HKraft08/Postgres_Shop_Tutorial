@@ -102,4 +102,38 @@ VALUES
 	(5, 4, 2, 500.85),
 	(6, 3, 2, 99.50);
 
+SELECT * FROM products
+WHERE price < 300;
+
+SELECT * FROM products
+WHERE stock_quantity = 15;
+
+SELECT * FROM orders
+WHERE status = 'PENDING';
+
+SELECT * FROM products
+WHERE
+	price < 150
+	OR
+	stock_quantity < 20;
+
+SELECT first_name, last_name, email FROM customers;
+
+SELECT * FROM products
+WHERE price > 200;
+
+SELECT * FROM orders
+WHERE 
+	status = 'PAID'
+	OR
+	status = 'SHIPPED';
+
+SELECT * FROM products
+WHERE product_name LIKE '%USB%';
+
+SELECT * FROM products 
+ORDER BY price DESC;
+
+
+
 
