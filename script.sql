@@ -180,6 +180,29 @@ INNER JOIN order_items AS oi
 INNER JOIN products AS p
     ON p.product_id = oi.product_id;
 
+UPDATE products
+SET price = 109.50
+WHERE product_name = 'USB-C cable';
+
+UPDATE products
+SET
+	stock_quantity = 45,
+	description = 'One metre USB-C charging and data cable'
+WHERE product_name = 'USB_C cable';
+
+ALTER TABLE customers
+ADD COLUMN city VARCHAR(80);
+
+ALTER TABLE customers
+ALTER COLUMN city TYPE VARCHAR(100);
+
+ALTER TABLE customers 
+DROP COLUMN city;
+
+DELETE FROM customers
+WHERE email = 'hishaam@example.com';
+
+
 
 
 
