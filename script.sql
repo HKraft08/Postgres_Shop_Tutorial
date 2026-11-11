@@ -270,11 +270,17 @@ SELECT * FROM practice_notes;
 
 DROP TABLE practice_notes;
 
+INSERT INTO customers (first_name, last_name, email, phone)
+VALUES 
+	('Jane', 'Doe', 'jane@example.com', '0770000007');
 
+INSERT INTO orders (customer_id, status)
+VALUES 
+	(7, 'PAID');
 
-
-
-
+INSERT INTO order_items (order_id, product_id, quantity, unit_price)
+VALUES 
+	(7, 5, 2, 12000.99);
 
 
 
